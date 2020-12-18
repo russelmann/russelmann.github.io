@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.publications.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Publications" }}</h2>
+    <ul class="post-list">
+	  {%- assign publications = site.publications | sort: 'date' | reverse -%}
+      {%- for publication in publications -%}
+ 	    <table style="width:100%">
+          <colgroup><col width="150">
+          </colgroup><tbody><tr>
+          <td>
+       	    <a href="{{ publication.link }}">
+              <img src="./publications/{{ publication.thumb }}" alt="Photo" style="width:120px;">
+       	    </a>
+          </td>
+          <td>
+            <p>
+       		<b><a href="{{ publication.link }}">{{ publication.title }}</a></b><br>
+       		{{ publication.authors }}<br>
+       		<i>{{ publication.pub }}</i><br>
+       		links:
+       		<a href="{{ publication.paper }}">paper</a>
+       		<a href="https://youtu.be/{{ publication.youtube_video }}">youtube</a>
+       	    </p>
+       	  </td> 
+          </tr>
+        </tbody></table>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  
+  <h2 class="post-list-heading">{{ page.list_title | default: "Media" }}</h2>
+  <ul>
+  {%- assign media = site.media | sort: 'year' | reverse -%}
+  {%- for medium in media -%}
+    <li>{{ medium.year }} {{ medium.source }}: <a href="{{ medium.link }}">{{ medium.title }}</a></li>
+  {%- endfor -%}
+  </ul>
+  
+  <h3>Reviewer</h3>
+
+  <ul>
+    <li>Eurographics</li>
+    <li>Computer-Aided Design</li>
+    <li>Computers &amp; Graphics</li>
+  </ul>
+  
+  <h3>Other projects</h3>
+  
+  <a href="http://pub.ist.ac.at/~edels/hexasphere/">Hexasphere</a>
+  
+</div>
