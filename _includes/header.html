@@ -5,8 +5,13 @@
         <img src="./images/photo_ruslan.jpg" alt="Photo" style="width:150px;">
       </div>
    	  <div style="flex-grow: 1; margin-left: 20px; float: left;">
-        <h2>Ruslan Guseinov</h2>
-        I am the head of technology of the spin-off project AutoMold at <a href="https://ist.ac.at/en/">IST Austria</a>. Formerly I worked there in the Computer Graphics and Digital Fabrication lab under the supervision of <a href="http://berndbickel.com/about-me/">Bernd Bickel</a> and got a PhD degree in 2020.
+        <div class="container" style="display: flex;">
+		  <div style="width: 50%"><h2>Ruslan Guseinov</h2></div>
+		  <div style="margin-left: auto; margin-right: 0;"><img src="./images/AutoMold.png"></div>
+		</div>
+		<div style="flex-grow: 1; float: left;">
+          I am the head of technology of the spin-off project AutoMold at <a href="https://ist.ac.at/en/">IST Austria</a>. Formerly I worked there in the Computer Graphics and Digital Fabrication lab under the supervision of <a href="http://berndbickel.com/about-me/">Bernd Bickel</a> and got a PhD degree in 2020.
+		</div>
       </div>
     </div>
     {%- assign default_paths = site.pages | map: "path" -%}
