@@ -8,6 +8,11 @@ layout: default
   {%- endif -%}
 
   {{ content }}
+  
+  <a href="https://scholar.google.at/citations?user=nhFAQLsAAAAJ&hl=en"><img src="./images/scholar.png" alt="Google Scholar" style="width:25px;"></a>
+  <a href="https://github.com/russelmann"><img src="./images/github.png" alt="Github" style="width:25px;"></a>
+  <a href=""><img src="./images/cv.png" alt="CV" style="width:25px;"></a>
+  <br><br>
 
   {%- if site.publications.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Publications" }}</h2>
@@ -46,9 +51,16 @@ layout: default
   {%- endfor -%}
   </ul>
   
+  <h2>Awards</h2>
+  
+  <ul>
+    <li><a href="https://www.eg.org/wp/eurographics-awards-programme/phd-award/">Eurographics Best PhD Thesis 2021</a></li>
+  </ul>
+  
   <h3>Reviewer</h3>
 
   <ul>
+    <li>SIGGRAPH</li>
     <li>Eurographics</li>
     <li>Computer-Aided Design</li>
     <li>Computers &amp; Graphics</li>
