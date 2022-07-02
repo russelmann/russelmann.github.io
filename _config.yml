@@ -26,7 +26,6 @@ collections:
     sort_by: year
 
 title: Ruslan Guseinov
-email: ruslan.guseinov@ist.ac.at
 description: >- # this means to ignore newlines until "baseurl:"
   Personal page of Ruslan Guseinov.
 baseurl: "" # the subpath of your site, e.g. /blog
